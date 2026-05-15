@@ -1,23 +1,34 @@
 #include <iostream>
-#include <set>
+#include <vector>
 
 using namespace std;
 
-int main ()
+int main()
 {
-    set<int> s;
-    int inp;
-    cin >> inp;
-    for (int i = 0; i < inp; i++)
+    int n;
+    cin >> n;
+
+    vector<bool> seen(n + 1, false);
+    int trades = 0;
+
+    for (int i = 0; i < n; i++)
     {
-        int n;
-        cin >> n;
-        s.insert(n);
+        int x;
+        cin >> x;
+
+        if (seen[x])
+        {
+            trades++;
+        }
+        else
+        {
+            seen[x] = true;
+        }
     }
 
-    cout << inp - s.size() << "\n";
+    cout << trades << '\n';
 
     return 0;
 }
 
-    
+
