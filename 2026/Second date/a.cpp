@@ -1,37 +1,30 @@
+#include <set>
 #include <iostream>
-#include <math.h>
+#include <ios>
+
 
 using namespace std;
 
-int main ()
-{
-    int people = 0;
-    int products = 0;
-    double accPe = 0;
-    double accPro = 0;
+long long permutations(int k, int n, const string& s ) {
+    multiset<char> sett;
     
-    cin >> products;
-    cin >> people;
-    for (int i = 0; i < products; i++)
-    {
-        int n = 0;
-        cin >> n;
-        accPro += n;
-    }
-    
-    for (int i = 0; i < people; i++)
-    {
-        int n = 0;
-        cin >> n;
-        accPe += n;
-    }
- 
-    if (accPe >= ceil(accPro * 1.1))
-    {
-        cout << "YES" << "\n";
-    } else {
-        cout << "NO" << "\n";
+    for (char c : s) {
+        sett.insert(c);
     }
 
-    return 0;
+}
+
+int main() {
+
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+
+    int t, n, k;
+
+    cin >> t;
+
+    for (int i = 0; i < t; ++i) {
+
+    }
 }
